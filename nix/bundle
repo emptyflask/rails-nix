@@ -1,0 +1,4 @@
+#!/bin/sh
+
+nix-shell -p bundix bundler --run "bundle lock $* && bundix --gemset=nix/gemset.nix" &&
+  direnv reload
