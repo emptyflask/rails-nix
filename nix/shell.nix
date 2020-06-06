@@ -1,6 +1,10 @@
 let
   sources  = import ./sources.nix;
-  config   = { allowUnfree = true; };
+
+  config   = {
+    # nix config options can go here:
+    # allowUnfree = true;
+  };
 
   pkgs     = import sources.nixpkgs  { config = config; };
   unstable = import sources.unstable { config = config; };
@@ -12,8 +16,9 @@ in
     buildInputs = with pkgs; [
       bundix
       bundler
+      bundler-audit
       libxml2
-      unstable.nodejs
+      unstable.nodejs-12_x # specify unstable to use the latest available 12.x version
       rubyenv
       rubyenv.wrappedRuby
       sassc
