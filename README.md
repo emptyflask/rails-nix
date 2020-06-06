@@ -25,7 +25,7 @@ niv add NixOS/nixpkgs-channels -n unstable -b nixos-unstable # add the developme
 ## Notes
 
 [Bundix](https://github.com/nix-community/bundix) is not yet able to handle
-*every* Gemfile -- gems on local, private, and architecture-specific gems might
+*every* Gemfile -- gems on local paths and architecture-specific gems might
 still have some problems.
 
 If you make changes and they don't seem to update in the current shell, try
