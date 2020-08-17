@@ -3,7 +3,7 @@
 with pkgs;
 
 let
-  ruby = ruby_2_6;
+  ruby = ruby_2_7;
 
 in
   bundlerEnv {
