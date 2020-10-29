@@ -1,4 +1,4 @@
-#!/nix/store/bzwak2r58k9hilpb2vy8p6k4nqh3fkfh-ruby-2.6.6/bin/ruby
+#!/usr/bin/env ruby
 
 ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
 ENV["NODE_ENV"]  ||= "development"
