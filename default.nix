@@ -7,7 +7,7 @@ let
 in
   pkgs.stdenv.mkDerivation rec {
     name = "rails6-demo";
-    src = ./.;
+    src = if pkgs.lib.inNixShell then null else ./.;
 
     env = rubyenv;
 
@@ -21,7 +21,7 @@ in
       rubyenv.wrappedRuby
       sassc
       yarn
-      unstable.nodejs-12_x
+      nodejs-12_x
     ];
 
     # phases = ["installPhase"];
