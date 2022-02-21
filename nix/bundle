@@ -1,6 +1,0 @@
-#!/bin/sh
-
-nix-shell nix/bundler.nix \
-  --run "bundle lock $* && bundix --gemset=nix/gemset.nix"
-
-direnv reload
